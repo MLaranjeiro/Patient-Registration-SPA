@@ -19,7 +19,7 @@ function View1() {
     
     // Validate input with alphabets only using regex
     if (!/^[a-zA-Z]+$/.test(firstName) || !/^[a-zA-Z]+$/.test(lastName)) {
-      setError('Names should contain only alphabetic characters (A-Z).'); 
+      setError('Names should contain only letters.'); 
       return;
     }
 
@@ -32,30 +32,30 @@ function View1() {
   };
 
   return (
-    <div>
+    <div className="container">
       <h1>Enter Your Name</h1>
       <form onSubmit={handleSubmit}>
-        <label>
-          First Name:
+        <div className="form-group">
+          <label>First Name:</label>
           <input
             type="text"
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
             required
           />
-        </label>
-        <br />
-        <label>
-          Last Name:
+        </div>
+
+        <div className="form-group">
+          <label>Last Name:</label>
           <input
             type="text"
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
             required
           />
-        </label>
-        <br />
-        {error && <p style={{ color: 'red' }}>{error}</p>} {/* Display error message */}
+        </div>
+
+        {error && <p className="error">{error}</p>}
         <button type="submit">Next</button>
       </form>
     </div>

@@ -60,40 +60,40 @@ function View2() {
   };
  
   return (
-    <div>
+    <div className="container">
       <h1>Enter Your Details</h1>
       <form onSubmit={handleSubmit}>
-        <label>
-          Date of Birth:
+        <div className="form-group">
+          <label>Date of Birth:</label>
           <input
             type="date"
             value={dob}
             onChange={(e) => setDob(e.target.value)}
             required
           />
-        </label>
-        <br />
-        <label>
-          Health Card Number:
+        </div>
+
+        <div className="form-group">
+          <label>Health Card Number:</label>
           <input
             type="text"
             value={healthCardNumber}
             onChange={(e) => setHealthCardNumber(e.target.value)}
             required
           />
-        </label>
-        <br />
-        <label>
-          Gender:
+        </div>
+
+        <div className="form-group">
+          <label>Gender:</label>
           <select value={gender} onChange={(e) => setGender(e.target.value)} required>
             <option value="">Select Gender</option>
             <option value="male">Male</option>
             <option value="female">Female</option>
             <option value="other">Other</option>
           </select>
-        </label>
-        <br />
-        {error && <p style={{ color: 'red' }}>{error}</p>}
+        </div>
+
+        {error && <p className="error">{error}</p>}
         <button type="submit">Next</button>
       </form>
     </div>

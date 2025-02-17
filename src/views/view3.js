@@ -32,14 +32,15 @@ function View3() {
   };
 
   return (
-    <div>
+    <div className="container">
       <h1>Summary</h1>
-      <p><strong>First Name:</strong> {summary.firstName}</p>
-      <p><strong>Last Name:</strong> {summary.lastName}</p>
-      <p><strong>Date of Birth:</strong> {summary.dob}</p>
-      <p><strong>Gender:</strong> {summary.gender}</p>
-      <p><strong>Health Card Number:</strong> {summary.healthCardNumber}</p>
-
+        <div className="summary-card">
+            <p><span className="summarylabel">First Name:</span> {summary.firstName}</p>
+            <p><span className="summarylabel">Last Name:</span> {summary.lastName}</p>
+            <p><span className="summarylabel">Date of Birth:</span> {summary.dob}</p>
+            <p><span className="summarylabel">Gender:</span> {summary.gender}</p>
+            <p><span className="summarylabel">Health Card Number:</span> {summary.healthCardNumber}</p>
+        </div>
       <button onClick={handleBackToView1}>New Registration? Click Here!</button>
     </div>
   );
