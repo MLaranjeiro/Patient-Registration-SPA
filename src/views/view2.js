@@ -23,7 +23,7 @@ function View2() {
     }
 
     if (!mod10Check(healthCardNumber)) {
-      setError('Invalid Health Card Number. Please ensure it passes MOD 10.');
+      setError('Invalid Health Card Number.');
       return;
     }
 
