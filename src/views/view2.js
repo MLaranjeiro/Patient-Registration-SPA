@@ -31,4 +31,27 @@ function View2() {
     navigate('/view3'); // Proceed to View 3
   };
 
+  //Mod10 Check for validating Health Card Number
+  const mod10Check = (number) => {
+    let sum = 0;
+    let shouldDouble = false; // Start with the rightmost digit (not doubled)
+  
+    // Loop over digits in the health card number starting from the rightmost digit
+    for (let i = number.length - 1; i >= 0; i--) {
+      let digit = parseInt(number.charAt(i));
+  
+      if (shouldDouble) {
+        digit *= 2;
+        if (digit > 9) {
+          digit -= 9; // Adjust if doubling results in a number greater than 9
+        }
+      }
+  
+      sum += digit;
+      shouldDouble = !shouldDouble; // Alternate between doubling and not doubling
+    }
+  
+    return sum % 10 === 0; // Valid if the sum is divisible by 10
+  };
+  
 }
