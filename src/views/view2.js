@@ -27,6 +27,11 @@ function View2() {
       return;
     }
 
+    // In View2, store the data in localStorage after form submission
+    localStorage.setItem('dob', dob);
+    localStorage.setItem('gender', gender);
+    localStorage.setItem('healthCardNumber', healthCardNumber);
+
     setError('');
     navigate('/view3'); // Proceed to View 3
   };
