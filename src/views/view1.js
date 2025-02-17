@@ -19,7 +19,7 @@ function View1() {
     
     // Validate input with alphabets only using regex
     if (!/^[a-zA-Z]+$/.test(firstName) || !/^[a-zA-Z]+$/.test(lastName)) {
-      setError('Names can only contain alphabets.'); 
+      setError('Names should contain only alphabetic characters (A-Z).'); 
       return;
     }
 
@@ -33,7 +33,7 @@ function View1() {
 
   return (
     <div>
-      <h1>View 1: Enter Your Name</h1>
+      <h1>Enter Your Name</h1>
       <form onSubmit={handleSubmit}>
         <label>
           First Name:

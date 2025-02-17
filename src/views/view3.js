@@ -33,7 +33,7 @@ function View3() {
 
   return (
     <div>
-      <h1>View 3: Summary</h1>
+      <h1>Summary</h1>
       <p><strong>First Name:</strong> {summary.firstName}</p>
       <p><strong>Last Name:</strong> {summary.lastName}</p>
       <p><strong>Date of Birth:</strong> {summary.dob}</p>
