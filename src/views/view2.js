@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { format } from 'date-fns';
 
 function View2() {
   const [dob, setDob] = useState('');
@@ -7,6 +8,8 @@ function View2() {
   const [gender, setGender] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
+
+  const today = format(new Date(), 'yyyy-MM-dd');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -68,6 +71,7 @@ function View2() {
           <input
             type="date"
             value={dob}
+            max={today}
             onChange={(e) => setDob(e.target.value)}
             required
           />
