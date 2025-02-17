@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 function View1() {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
+  const [error, setError] = useState(''); // Add error state
   const navigate = useNavigate();
 
   // Handle form submission + stops from refreshing the page
@@ -12,12 +13,13 @@ function View1() {
 
     // Validate empty input
     if (!firstName.trim() || !lastName.trim()) {
-      alert('Both fields are required.');
+      setError('Both fields are required.'); 
       return;
     }
+    
     // Validate input with alphabets only using regex
     if (!/^[a-zA-Z]+$/.test(firstName) || !/^[a-zA-Z]+$/.test(lastName)) {
-      alert('Names can only contain alphabets.');
+      setError('Names can only contain alphabets.'); 
       return;
     }
 
@@ -25,6 +27,7 @@ function View1() {
     localStorage.setItem('firstName', firstName);
     localStorage.setItem('lastName', lastName);
 
+    setError(''); // Clear error message if validation passes
     navigate('/view2');
   };
 
@@ -52,6 +55,7 @@ function View1() {
           />
         </label>
         <br />
+        {error && <p style={{ color: 'red' }}>{error}</p>} {/* Display error message */}
         <button type="submit">Next</button>
       </form>
     </div>
