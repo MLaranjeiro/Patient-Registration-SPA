@@ -1,0 +1,33 @@
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
+function View1() {
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const navigate = useNavigate();
+
+  // Handle form submission + stops from refreshing the page
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Validate empty input
+    if (!firstName.trim() || !lastName.trim()) {
+      alert('Both fields are required.');
+      return;
+    }
+    // Validate input with alphabets only using regex
+    if (!/^[a-zA-Z]+$/.test(firstName) || !/^[a-zA-Z]+$/.test(lastName)) {
+      alert('Names can only contain alphabets.');
+      return;
+    }
+
+    // Store data in localStorage so data can be viewed in view 3 when displaying summary
+    localStorage.setItem('firstName', firstName);
+    localStorage.setItem('lastName', lastName);
+
+    navigate('/view2');
+  };
+
+}
+
+export default View1;
