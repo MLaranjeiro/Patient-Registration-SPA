@@ -36,7 +36,7 @@ function View2() {
     navigate('/view3'); // Proceed to View 3
   };
 
-  //Mod10 Check for validating Health Card Number
+  //Mod10 Check for validating Health Card Number, assitance from https://worldemr.org/modulus10-number-check-function-for-validating-health-card-numbers-input/
   const mod10Check = (number) => {
     let sum = 0;
     let shouldDouble = false; // Start with the rightmost digit (not doubled)
