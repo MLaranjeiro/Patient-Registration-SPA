@@ -9,6 +9,7 @@ export default function AppRouter() {
     <Router>
       <Routes>
         <Route path="/" element={<View1 />} />
+        <Route path="/view1" element={<View1 />} />
         <Route path="/view2" element={<View2 />} />
         <Route path="/view3" element={<View3 />} />
       </Routes>
