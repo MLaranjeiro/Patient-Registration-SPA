@@ -53,5 +53,46 @@ function View2() {
   
     return sum % 10 === 0; // Valid if the sum is divisible by 10
   };
-  
+ 
+  return (
+    <div>
+      <h1>View 2: Enter Your Details</h1>
+      <form onSubmit={handleSubmit}>
+        <label>
+          Date of Birth:
+          <input
+            type="date"
+            value={dob}
+            onChange={(e) => setDob(e.target.value)}
+            required
+          />
+        </label>
+        <br />
+        <label>
+          Health Card Number:
+          <input
+            type="text"
+            value={healthCardNumber}
+            onChange={(e) => setHealthCardNumber(e.target.value)}
+            required
+          />
+        </label>
+        <br />
+        <label>
+          Gender:
+          <select value={gender} onChange={(e) => setGender(e.target.value)} required>
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+        </label>
+        <br />
+        {error && <p style={{ color: 'red' }}>{error}</p>}
+        <button type="submit">Next</button>
+      </form>
+    </div>
+  );
 }
+
+export default View2;
