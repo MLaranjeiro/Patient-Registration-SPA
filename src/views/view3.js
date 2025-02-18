@@ -41,7 +41,7 @@ function View3() {
             <p><span className="summarylabel">Gender:</span> {summary.gender}</p>
             <p><span className="summarylabel">Health Card Number:</span> {summary.healthCardNumber}</p>
         </div>
-      <button onClick={handleBackToView1}>New Registration? Click Here!</button>
+      <button className="new-reg-button" onClick={handleBackToView1}>New Registration? Click Here!</button>
     </div>
   );
 }

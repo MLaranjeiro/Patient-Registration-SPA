@@ -73,6 +73,11 @@ button {
   cursor: pointer;
 }
 
+.new-reg-button {
+  width: 400px; 
+  cursor: pointer;
+}
+
 .error {
   color: #ff4444;
   font-size: 1rem;
@@ -85,11 +90,11 @@ button {
   background: #f9f9f9;
   padding: 1rem;
   border-radius: 8px;
-  margin-top: 1rem;
+  margin-bottom: 0.5em;
 }
 
 .summary-card p {
-  margin: 0.5rem 0;
+  margin: 0.5rem;
 }
 
 .summary-card .summarylabel {
