@@ -42,6 +42,7 @@ function View1() {
             type="text"
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
+            placeholder="Enter your first name"
             required
           />
         </div>
@@ -52,6 +53,7 @@ function View1() {
             type="text"
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
+            placeholder="Enter your first name"
             required
           />
         </div>
