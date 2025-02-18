@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './styles.css';
+import './css/styles.css';
 import AppRouter from './Router'; // Import the Router component
-import reportWebVitals from './reportWebVitals';
+import reportWebVitals from './testing/reportWebVitals';
 import logo from './images/hhsclogo.png';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
