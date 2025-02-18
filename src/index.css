@@ -3,9 +3,8 @@ body {
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #e0e0f5;
+  background: rgba(23, 43, 83, 0.8);
   color: #333;
-  padding: 0;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -13,13 +12,16 @@ body {
 }
 
 .container {
-  background: white;
+  background: rgba(23, 43, 83, 0.8);
   padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-  max-width: 500px;
   width: 100%;
-  margin: 20px;
+  width: 100vw;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .form-group {
@@ -30,20 +32,14 @@ body {
 h1 {
   font-size: 2rem;
   margin-bottom: 2rem;
-  color: #444;
+  color: #ffffff;
   text-align: center;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
 }
 
 label {
   display: block;
   font-weight: 400;
-  color: #555;
+  color: #ffffff;
   margin-bottom: 0.5rem;
 }
 
@@ -57,15 +53,9 @@ select {
   box-sizing: border-box;
 }
 
-input:focus {
-  border-color: #6c63ff;
-  outline: none;
-  box-shadow: 0 0 5px rgba(108, 99, 255, 0.5);
-}
-
 button {
   padding: 0.8rem;
-  background: #6c63ff;
+  background: #63b9ffc2;
   color: white;
   border: none;
   border-radius: 8px;
@@ -74,11 +64,6 @@ button {
   margin-top: 0.5rem;
   width: 100%;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background: #5a52e0;
 }
 
 .error {
