@@ -33,7 +33,7 @@ function View3() {
 
   return (
     <div className="container">
-      <h1>Summary</h1>
+      <h1>Registration Successful - Summary</h1>
         <div className="summary-card">
             <p><span className="summarylabel">First Name:</span> {summary.firstName}</p>
             <p><span className="summarylabel">Last Name:</span> {summary.lastName}</p>

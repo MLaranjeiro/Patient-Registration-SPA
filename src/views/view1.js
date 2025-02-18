@@ -34,7 +34,7 @@ function View1() {
 
   return (
     <div className="container">
-      <h1>Enter Your Name</h1>
+      <h1>Patient Registration - Enter Your Name</h1>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label>First Name:</label>

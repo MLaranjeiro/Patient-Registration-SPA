@@ -64,7 +64,7 @@ function View2() {
  
   return (
     <div className="container">
-      <h1>Enter Your Details</h1>
+      <h1>Patient Registration - Enter Your Details</h1>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label>Date of Birth:</label>
