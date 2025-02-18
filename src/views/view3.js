@@ -21,6 +21,8 @@ function View3() {
       gender,
       healthCardNumber,
     });
+
+    //In the future could implement a feature to save summary data to a database using a POST request and a database (i.e. MongoDB/mySQL)
   }, []); 
 
   const handleBackToView1 = () => {
