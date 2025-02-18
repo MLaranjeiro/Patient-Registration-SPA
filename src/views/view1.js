@@ -18,8 +18,9 @@ function View1() {
     }
     
     // Validate input with alphabets only using regex
-    if (!/^[a-zA-Z]+$/.test(firstName) || !/^[a-zA-Z]+$/.test(lastName)) {
-      setError('Names should contain only letters.'); 
+    const nameRegex = /^[a-zA-Z\s'-]+$/;
+    if (!nameRegex.test(firstName) || !nameRegex.test(lastName)) {
+      setError('Names should contain only letters, spaces, hyphens, and apostrophes.'); 
       return;
     }
 
